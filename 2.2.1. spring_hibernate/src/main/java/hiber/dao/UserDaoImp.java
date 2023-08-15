@@ -17,20 +17,22 @@ public class UserDaoImp implements UserDao {
 
 
 
-   @Autowired
-   private SessionFactory sessionFactory;
+   private final SessionFactory sessionFactory;
 
-   @Override
+    public UserDaoImp(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 
-   public void getUserAndCarByModelCarAndSeriesCar(String carModel, int carSeries) {
-       String HQL = "from User as user where user.userCar.series = :carSeries AND user.userCar.model = :carModel";
-       TypedQuery<User> query = sessionFactory.getCurrentSession().createQuery(HQL, User.class);
-       query.setParameter("carSeries", carSeries);
-       query.setParameter("carModel", carModel);
-       User user = query.getSingleResult();
-       System.out.println(user.toString());
-       System.out.println();
-   }
+//    @Override
+//    public void getUserAndCarByModelCarAndSeriesCar(String carModel, int carSeries) {
+//        String HQL = "from User as user where user.userCar.series = :carSeries AND user.userCar.model = :carModel";
+//        TypedQuery<User> query = sessionFactory.getCurrentSession().createQuery(HQL, User.class);
+//        query.setParameter("carSeries", carSeries);
+//        query.setParameter("carModel", carModel);
+//        User user = query.getSingleResult();
+//        System.out.println(user.toString());
+//        System.out.println();
+//    }
 
 
 
