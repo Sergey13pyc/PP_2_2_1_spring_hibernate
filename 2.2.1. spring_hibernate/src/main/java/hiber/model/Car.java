@@ -40,9 +40,6 @@ public class Car {
         return id;
     }
 
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
 
     public User getUser() {
         return user;
@@ -64,11 +61,10 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "id=" + id +
-                ", model='" + model + '\'' +
-                ", series=" + series +
-                ", user=" + user +
-                '}';
+        return
+                " User : " + "\n" + user + "\n" +
+                        " Car :" + "\n" +
+                        " model ='" + model + '\'' +
+                        " series =" + series + "\n";
     }
 }

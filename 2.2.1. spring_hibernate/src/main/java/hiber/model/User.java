@@ -20,14 +20,17 @@ public class User {
    @Column(name = "email")
    private String email;
 
-   public User() {}
-   
+
+   public User() {
+   }
+
    public User(String firstName, String lastName, String email) {
       this.firstName = firstName;
       this.lastName = lastName;
       this.email = email;
 
    }
+
 
    public Long getId() {
       return id;
@@ -62,16 +65,14 @@ public class User {
    }
 
 
-
    @Override
    public String toString() {
       return
-              //             "Результат поиска по " +
-//              "Автомобилю (" + userCar + "):\n" +
-              " ID =" + id + "\n" +
-              " First Name ='" + firstName + '\'' + "\n" +
-              " Last Name ='" + lastName + '\'' + "\n" +
-              " @mail ='" + email + '\''
+
+              " ID = " + id + "\n" +
+                      " First Name = '" + firstName + '\'' + "\n" +
+                      " Last Name = '" + lastName + '\'' + "\n" +
+                      " @mail = '" + email + '\''
               ;
    }
 }
