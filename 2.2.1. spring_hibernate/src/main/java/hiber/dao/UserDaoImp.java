@@ -23,6 +23,8 @@ public class UserDaoImp implements UserDao {
         this.sessionFactory = sessionFactory;
     }
 
+
+
 //    @Override
 //    public void getUserAndCarByModelCarAndSeriesCar(String carModel, int carSeries) {
 //        String HQL = "from User as user where user.userCar.series = :carSeries AND user.userCar.model = :carModel";

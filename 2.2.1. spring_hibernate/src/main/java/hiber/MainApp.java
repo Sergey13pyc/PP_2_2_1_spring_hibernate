@@ -48,7 +48,6 @@ public class MainApp {
          System.out.println("First Name = "+user.getFirstName());
          System.out.println("Last Name = "+user.getLastName());
          System.out.println("@mail = "+ user.getEmail());
-//         System.out.println("Car = "+user.getUserCar());
          System.out.println();
       }
 
@@ -58,6 +57,11 @@ public class MainApp {
 //      userService.getUserAndCarByModelCarAndSeriesCar("Honda", 333);
 //      userService.getUserAndCarByModelCarAndSeriesCar("Toyota", 777);
 //      userService.getUserAndCarByModelCarAndSeriesCar("Nissan", 111);
+
+      carService.findUserCar("Mazda", 666);
+      carService.findUserCar("Honda", 333);
+      carService.findUserCar("Toyota", 777);
+      carService.findUserCar("Nissan", 111);
 
       context.close();
    }

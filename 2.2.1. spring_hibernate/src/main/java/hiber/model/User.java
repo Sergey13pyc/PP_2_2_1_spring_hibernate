@@ -65,7 +65,8 @@ public class User {
 
    @Override
    public String toString() {
-      return "Результат поиска по " +
+      return
+              //             "Результат поиска по " +
 //              "Автомобилю (" + userCar + "):\n" +
               " ID =" + id + "\n" +
               " First Name ='" + firstName + '\'' + "\n" +
